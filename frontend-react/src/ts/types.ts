@@ -5,3 +5,8 @@ export type ExchangeRates = {
   code: string,
   rate: string
 }
+
+export type ResponseData = {
+  date: string,
+  rates: ExchangeRates[]
+}
