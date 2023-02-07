@@ -35,7 +35,7 @@ const ExchangeRatesTable = ({ rates, date }: Props) => {
             </tr>
           </thead>
           <tbody className="divide-y divide-zinc-200">
-            {rates.map((rate: any) => (
+            {rates.map((rate: ExchangeRates) => (
               <tr key={rate.code} className="odd:bg-zinc-50">
                 <td className="whitespace-nowrap px-4 py-2">{rate.country}</td>
                 <td className="whitespace-nowrap px-4 py-2">{rate.currency}</td>
