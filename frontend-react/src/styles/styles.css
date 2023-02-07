@@ -1,0 +1,7 @@
+/* TAILWINDCSS */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Global */
+@import "./global.css";
