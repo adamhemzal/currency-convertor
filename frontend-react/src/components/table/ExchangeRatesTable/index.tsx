@@ -10,10 +10,10 @@ const ExchangeRatesTable = ({ rates, date }: Props) => {
     <div className="mb-10">
       <div className="flex items-center justify-between flex-row">
         <p className="bloc text-xs">
-          Last update: <span className="font-bold">{date}</span>
+          Last updated: <span className="font-bold">{date}</span>
         </p>
         <p className="block text-xs">
-          Data are provided by{" "}
+          Data provided by{" "}
           <a href="https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/daily.txt">
             CNB
           </a>
