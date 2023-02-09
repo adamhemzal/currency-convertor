@@ -9,13 +9,11 @@ const app: Express = express();
 
 // Enable CORS for all methods
 // More info: https://enable-cors.org/server_expressjs.html
-/*
 app.use( (req: Request, res: Response, next: NextFunction) => {
-  res.header("Access-Control-Allow-Origin", "*")
-  res.header("Access-Control-Allow-Headers", "*")
+  res.header("Access-Control-Allow-Origin", "http://localhost:5173")
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
   next()
 });
-*/
 
 app.get('/', async (req: Request, res: Response) => {
   const rawData = await fetch("https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/daily.txt");
@@ -31,7 +29,7 @@ app.get('/', async (req: Request, res: Response) => {
 
   const result = {
     date: date,
-    data: parsedData
+    rates: parsedData
   }
 
   res.send(result);
@@ -40,3 +38,5 @@ app.get('/', async (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`App is running at http://localhost:${port}`);
 });
+
+export default app;

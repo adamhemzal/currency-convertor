@@ -1,4 +1,4 @@
-export type BankExchangeData = {
+export type ExchangeRates = {
   country: string,
   currency: string,
   amount: string,
@@ -7,7 +7,7 @@ export type BankExchangeData = {
 }
 
 export const parseCSV = (data: string[]) => {
-  const result: BankExchangeData[] = []
+  const result: ExchangeRates[] = []
 
   // get header from the data and use it as keys in object
   const keys: string[] = data[0].toLowerCase().split("|");
