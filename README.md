@@ -33,6 +33,7 @@ npm run dev
 - `react`: javascript library for building UIs
 - `express`: fast, unopinionated, minimalist web framework for Node.js
 - `jest`: delightful javascript testing framework with a focus on simplicity
+- `supertest`: high-level abstraction for testing HTTP
 - `tailwindcss`: utility-first CSS framework for building UIs fast
 - `tanstack/react-query`: powerful asynchronous state management for TS/JS, React, Solid, Vue and Svelte
 - `vite`: next generation front-end tooling (far better and faster than create-react-app)
