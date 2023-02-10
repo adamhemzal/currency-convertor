@@ -14,7 +14,6 @@ const ExchangeRatesForm = ({ rates }: Props) => {
   /* for now use any */
   const handleConversion = (e: any): void => {
     e.preventDefault();
-
     const select = e.target.currencySelect;
     const selectedOption = select.options[select.selectedIndex];
     const currencyRate = Number(selectedOption.getAttribute("data-rate"));
@@ -62,7 +61,7 @@ const ExchangeRatesForm = ({ rates }: Props) => {
             data-testid="currencySelect"
             name="currencySelect"
             id="currencySelectId"
-            onChange={(e) => setCurrency(e.target.value)}
+            onChange={(e) => setCurrency(e.target.value) }
             value={currency}
             className="rounded-md px-4 py-3 border border-zinc-200 shadow-sm"
           >
@@ -74,7 +73,6 @@ const ExchangeRatesForm = ({ rates }: Props) => {
                   value={rate.code}
                   data-rate={rate.rate}
                   data-amount={rate.amount}
-                  data-testid="currencySelectOption"
                 >
                   {rate.code}
                 </option>
@@ -105,6 +103,7 @@ const ExchangeRatesForm = ({ rates }: Props) => {
         </label>
         <output
           name="convertedAmount"
+          data-testid="convertedAmount"
           htmlFor="amountBeforeId"
           className="text-h3"
         >
