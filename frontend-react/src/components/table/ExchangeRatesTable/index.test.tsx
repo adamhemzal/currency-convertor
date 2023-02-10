@@ -5,11 +5,11 @@ describe("ExchangeRatesTable", () => {
   test("should render the table with the correct props", () => {
     const rates = [
       {
-        country: "Czech Republic",
-        currency: "Czech Koruna",
+        country: "Canada",
+        currency: "dollar",
         amount: "1",
-        code: "CZK",
-        rate: "25.405",
+        code: "CAD",
+        rate: "17",
       },
     ];
     const date = "07 February 2022";
@@ -19,6 +19,7 @@ describe("ExchangeRatesTable", () => {
     );
 
     expect(getByText(/Last updated/i)).toBeInTheDocument();
+    expect(getByText(/CAD/i)).toBeInTheDocument();
     expect(getByText(/Data provided/i)).toBeInTheDocument();
   });
 });
